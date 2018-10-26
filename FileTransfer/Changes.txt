@@ -1,0 +1,14 @@
+Creating SecurePageBase
+
+Adding ExactOnline.Client.Sdk by NuGet
+Adding new WebClientDocumentService.cs
+Adding new WebClientDocumentAttachmentService.cs
+
+generateAuthorizationReturnUrl
+renaming the BaseUrl to ExactOnlineUrl
+
+ConfigurationHelper added
+
+Configuration Page modified
+
+DropboxClient Service implemented

@@ -1,0 +1,194 @@
+﻿*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: "HelveticaNeue-Light" , "Helvetica Neue Light" , "Helvetica Neue" , Helvetica, Arial, "Lucida Grande" , sans-serif;
+	font-weight: 300;
+	color: #59595b;
+	font-size: small;
+}
+
+.header
+{
+	background: url(../images/header-background.png) repeat-x #ffffff;
+	height: 50px;
+}
+
+.logo
+{
+	background: url(../images/logo-exact.png) no-repeat center;
+	width: 135px;
+	height: 46px;
+}
+
+.developer-portal
+{
+	position: fixed; 
+	right:12px; 
+	top:0;
+}
+
+#developer-portal
+{
+	color: #FFFFFF;
+	font-size: 10px;
+	text-align: right;
+}
+
+.form
+{
+	margin: 20px;
+}
+
+.section-header
+{
+	background: url(../images/section-header-background.gif) repeat-x #e2e7ea;
+	color: #59595b;
+	font-weight: bold;
+	font-size: small;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.button
+{
+	background: url(../images/button-background.gif) repeat-x;
+	border: 1px solid #b5c3c9;
+	color: #21404e;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.button:hover
+{
+	background: url(../images/button-background-hover.gif) repeat-x;
+}
+
+.filter
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: solid 1px #dbe1e4;
+}
+
+.separator
+{
+	margin-top: 20px;
+}
+
+.label
+{
+	display: inline-block;
+	width: 150px;
+}
+
+.input-text
+{
+	display: inline-block;
+	width: 300px;
+}
+
+.list-title
+{
+	display: inline-block;
+	background-color: #6c8794;
+	color: #ffffff;
+	padding: 8px;
+	font-weight: bold;
+}
+
+.list-title-separator
+{
+	height: 3px;
+	background-color: #6c8794;
+}
+
+table
+{
+	width: 100%;
+	border: #dbe1e4 1px solid;
+}
+
+th
+{
+	background-color: #E2E7EA;
+	text-align: left;
+	padding: 8px;
+	font-size: smaller;
+	border: #dbe1e4 1px solid;
+}
+
+#GLAccountsGrid tr td
+{
+	padding: 8px;
+	border: #dbe1e4 1px solid;
+}
+
+td.edit
+{
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-bottom: 1px dotted #DBDBDB;
+	border-right: none;
+	color: #2C2C2D;
+	padding: 5px;	
+}
+
+a:link
+{
+	color: #498fcd;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: #498fcd;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #498fcd;
+	text-decoration: underline;
+}
+
+.URI
+{
+	border:solid 2px;
+	font-size:small;
+	padding:3px;
+	margin:4px 4px 4px 0;
+	min-width:445px;
+	display:inline-block;
+	background:#E2E7EA;
+	border-color:#dbe1e4;
+	color:#59595b;
+}
+
+/* Added by Arman*/
+.LegendTitle {
+    display: inline-block;
+    background-color: #6c8794;
+    color: #ffffff;
+    padding: 4px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.DropDownList {
+    display: inline-block;
+    background-color: #e2e7ea;
+    color: #21404e;
+    padding: 8px;
+    font-weight: bold;
+}
+
+fieldset {
+    border-width : 1px;
+    border-radius : 2px;
+    padding: 6px;
+}
