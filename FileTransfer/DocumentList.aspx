@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Exact Online REST API Documents Sample</title>
+    <title>Exact Online - Documents List</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="section-header">
-        Exact Online - Dropbox File Transfer
+        Exact Online - Documents List
     </div>
     <div class="form">
         <form id="form1" runat="server" defaultbutton="RefreshButton">

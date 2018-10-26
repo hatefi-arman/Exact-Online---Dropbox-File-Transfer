@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Exact Online REST API File Transfer Sample</title>
+    <title>Exact Online - Document Attachments</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="section-header">
-        Exact Online REST API File Transfer Sample
+        Exact Online - Document Attachments
     </div>
     <div class="form">
         <form id="form1" runat="server">
