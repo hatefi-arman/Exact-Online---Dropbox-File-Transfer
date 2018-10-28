@@ -28,6 +28,7 @@ namespace FileTransfer.Service
 
         #region Public Methods
 
+        //TODO: Implementation should be changed to use ExactOnline client SDK.
         public int GetCurrentCompany()
         {
             var uriBuilder = new UriBuilder(ServiceUri) { Query = "$select=CurrentDivision" };

@@ -9,8 +9,8 @@ using FileTransfer.Domain;
 namespace FileTransfer.Service
 {
     /// <summary>
-    /// Our pages (SalesInvoiceNew.aspx, SalesInvoiceEdit.aspx, SalesInvoiceList.aspx) each contain an instance of this class.
-    /// The authorization state is shared through the session.
+    /// The customized OAuth implementation for Exact Online service provider.
+    /// Each secure page contains an instance of this class.
     /// </summary>
     public class ExactOnlineOAuthClient : WebServerClient
     {
@@ -23,10 +23,10 @@ namespace FileTransfer.Service
         #region Constructor
 
         public ExactOnlineOAuthClient()
-            : base(CreateAuthorizationServerDescription(), MyClientIdentifier(), MyClientSecret())
+            : base(CreateAuthorizationServerDescription(), ConfigurationHelper.ExactOnlineClientId, ConfigurationHelper.ExactOnlineClientSecret)
         {
-            // initialization is already done through the base constructor
-            ClientCredentialApplicator = ClientCredentialApplicator.PostParameter(MyClientSecret());
+            // Initialization is already done through the base constructor
+            ClientCredentialApplicator = ClientCredentialApplicator.PostParameter(ConfigurationHelper.ExactOnlineClientSecret);
         }
 
         #endregion
@@ -91,11 +91,13 @@ namespace FileTransfer.Service
             return (timeToExpire.Minutes < 1);
         }
 
+        //TODO: Should be removed due to simple implementation,
         private static string MyClientIdentifier()
         {
             return ConfigurationHelper.ExactOnlineClientId;
         }
 
+        //TODO: Should be removed due to simple implementation,
         private static string MyClientSecret()
         {
             return ConfigurationHelper.ExactOnlineClientSecret;

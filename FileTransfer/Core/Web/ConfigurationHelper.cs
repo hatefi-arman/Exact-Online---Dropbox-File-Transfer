@@ -2,8 +2,13 @@
 
 namespace FileTransfer.Core.Web
 {
+    /// <summary>
+    /// A centralized helper class for managing application configuration in Web.config
+    /// </summary>
     public static class ConfigurationHelper
     {
+        #region Configuration keys constant values
+        //These keys represent the keys to store and retrieve the configured values to/from AppSettings section of Web.config
         private const string EXACT_ONLINE_CLIENT_APP_ID_CONFIG_KEY = "ExactOnlineClientId";
         private const string EXACT_ONLINE_CLIENT_APP_SECRET_CONFIG_KEY = "ExactOnlineClientSecret";
         private const string EXACT_ONLINE_BASE_URL_CONFIG_KEY = "ExactOnlineBaseUrl";
@@ -11,6 +16,11 @@ namespace FileTransfer.Core.Web
         private const string DROPBOX_APP_KEY_CONFIG_KEY = "DropboxAppKey";
         private const string DROPBOX_APP_SECRET_CONFIG_KEY = "DropboxAppSecret";
         private const string DROPBOX_ACCESS_TOKEN_CONFIG_KEY = "DropboxAccessToken";
+
+        #endregion
+
+
+        #region Public properties
 
         public static string ExactOnlineClientId
         {
@@ -56,6 +66,11 @@ namespace FileTransfer.Core.Web
             }
         }
 
+        #endregion
+
+        /// <summary>
+        /// Stores the configiration details in AppSettings section of the Web.config.
+        /// </summary>
         public static void UpdateSettings(
             string exactOnlineClientId,
             string exactOnlineClientSecret,

@@ -11,6 +11,7 @@ namespace FileTransfer
         {
             if (!IsPostBack)
             {
+                //Preload existing configuration data
                 ExactOnlineClientId.Text = ConfigurationHelper.ExactOnlineClientId;
                 ExactOnlineClientSecret.Text = ConfigurationHelper.ExactOnlineClientSecret;
                 ExactOnlineUrl.SelectedValue = ConfigurationHelper.ExactOnlineBaseUrl;

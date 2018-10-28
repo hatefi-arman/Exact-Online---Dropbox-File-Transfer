@@ -14,15 +14,23 @@ namespace FileTransfer.Service
 
         #endregion
 
+        #region Public Methods
+
+        /// <summary>
+        /// Returns the list of the available Documents of the current user account at ExactOnline.
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Document> GetDisplayList()
         {
             return Client.For<Document>()
-                .Select(
+                .Select(    //Chooses the required fields of the Documents to be dispalyed in the screen.
                     d => d.ID,
                     d => d.Subject,
                     d => d.TypeDescription,
                     d => d.Created)
                 .Get();
-        }
+        } 
+
+        #endregion
     }
 }

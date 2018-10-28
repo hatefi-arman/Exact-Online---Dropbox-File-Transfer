@@ -10,6 +10,9 @@ using FileTransfer.Core.Web;
 
 namespace FileTransfer.Service
 {
+    /// <summary>
+    /// The base class for all ExactOnline services.
+    /// </summary>
 	public class WebClientServiceBase : IDisposable
 	{
 		#region Fields
@@ -17,6 +20,9 @@ namespace FileTransfer.Service
 		private WebClient _webClient;
 		private readonly IAuthorizationState _authorizationState;
 
+        /// <summary>
+        /// The ExactOnline api services client proxy.
+        /// </summary>
         private readonly ExactOnlineClient _client;
 
         #endregion
@@ -33,6 +39,8 @@ namespace FileTransfer.Service
 			}
 		}
 
+
+        //TODO: Should be removed after implementing the Me service using ExactOnline client SDK.
 		protected WebClient WebClient
 		{
 			get
