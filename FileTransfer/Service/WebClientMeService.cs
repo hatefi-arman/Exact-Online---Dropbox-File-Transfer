@@ -8,15 +8,6 @@ namespace FileTransfer.Service
 {
     public class WebClientMeService : WebClientServiceBase
     {
-        #region Properties
-
-        public static Uri ServiceUri
-        {
-            get { return new Uri(ExactOnlineUrl, "api/v1/current/Me"); }
-        }
-
-        #endregion
-
         #region Constructor
 
         public WebClientMeService(IAuthorizationState authorizationState)
@@ -28,29 +19,11 @@ namespace FileTransfer.Service
 
         #region Public Methods
 
-        //TODO: Implementation should be changed to use ExactOnline client SDK.
         public int GetCurrentCompany()
         {
-            var uriBuilder = new UriBuilder(ServiceUri) { Query = "$select=CurrentDivision" };
-            string jsonResponse = WebClient.DownloadString(uriBuilder.Uri);
-            return ParseJson(jsonResponse);
+            return Client.CurrentMe().CurrentDivision;
         }
 
         #endregion
-
-        #region Private Methods
-
-        private static int ParseJson(string jsonString)
-        {
-            var serializer = new JavaScriptSerializer();
-            var jsonObject = serializer.DeserializeObject(jsonString) as Dictionary<string, object>;
-            var jsonDictionary = (Dictionary<string, object>)jsonObject["d"];
-            var results = (object[])jsonDictionary["results"];
-            var result = (Dictionary<string, object>)results.First();
-            return Convert.ToInt32(result["CurrentDivision"]);
-        }
-
-        #endregion
-
     }
 }

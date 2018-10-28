@@ -16,8 +16,7 @@ namespace FileTransfer.Service
 	public class WebClientServiceBase : IDisposable
 	{
 		#region Fields
-
-		private WebClient _webClient;
+        
 		private readonly IAuthorizationState _authorizationState;
 
         /// <summary>
@@ -36,28 +35,6 @@ namespace FileTransfer.Service
 				var baseUri = ConfigurationHelper.ExactOnlineBaseUrl;
 
 				return new Uri(baseUri.EndsWith("/") ? baseUri : baseUri + "/");
-			}
-		}
-
-
-        //TODO: Should be removed after implementing the Me service using ExactOnline client SDK.
-		protected WebClient WebClient
-		{
-			get
-			{
-				if (_webClient == null)
-				{
-					_webClient = new WebClient();
-
-					_webClient.Headers.Add("Content-type", "application/json");
-					_webClient.Headers.Add("Accept", "application/json");
-
-					if (_authorizationState != null)
-					{
-						_webClient.Headers.Add("Authorization", "Bearer " + _authorizationState.AccessToken);
-					}
-				}
-				return _webClient;
 			}
 		}
 
@@ -133,10 +110,10 @@ namespace FileTransfer.Service
 			if (disposing)
 			{
 				// dispose managed resources
-				if (_webClient != null)
-				{
-					_webClient.Dispose();
-				}
+				//if (_webClient != null)
+				//{
+				//	_webClient.Dispose();
+				//}
 			}
 		}
 

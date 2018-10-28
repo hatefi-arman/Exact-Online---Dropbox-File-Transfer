@@ -91,18 +91,6 @@ namespace FileTransfer.Service
             return (timeToExpire.Minutes < 1);
         }
 
-        //TODO: Should be removed due to simple implementation,
-        private static string MyClientIdentifier()
-        {
-            return ConfigurationHelper.ExactOnlineClientId;
-        }
-
-        //TODO: Should be removed due to simple implementation,
-        private static string MyClientSecret()
-        {
-            return ConfigurationHelper.ExactOnlineClientSecret;
-        }
-
         private static AuthorizationServerDescription CreateAuthorizationServerDescription()
         {
             var exactOnlineUrl = ConfigurationHelper.ExactOnlineBaseUrl;
